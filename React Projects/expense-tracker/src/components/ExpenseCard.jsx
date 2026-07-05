@@ -9,8 +9,18 @@ function ExpenseCard({ expense, onDelete, onEdit }) {
       </p>
 
       <p>
-        <strong>Type :</strong> {expense.type}
-      </p>
+    <strong>Type :</strong>
+
+    <span
+        style={{
+            color: expense.type === "Income" ? "green" : "red",
+            fontWeight: "bold",
+            marginLeft: "5px"
+        }}
+    >
+        {expense.type}
+    </span>
+</p>
 
       <p>
         <strong>Category :</strong> {expense.category}
